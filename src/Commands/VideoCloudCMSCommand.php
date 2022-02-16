@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Jasonadriaan\VideoCloudCMS\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class VideoCloudCMSCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'videocloudcms';
 
     public $description = 'My command';
 
