@@ -53,19 +53,19 @@ class VideoCloudCMS
 
     public function offset(int $offset = null)
     {
-        $this->offset = (empty($offset)) ? 'offset=' . $offset : ''; 
+        $this->offset = (empty($offset)) ? '&offset=' . $offset : ''; 
         return $this;
     }
 
     public function sort(string $sort = null)
     {
-        $this->sort = (empty($sort)) ? 'sort=' . $sort : ''; 
+        $this->sort = (empty($sort)) ? '&sort=' . $sort : ''; 
         return $this;
     }
 
     public function query(string $query = null)
     {
-        $this->query = (empty($query)) ? 'query=' . $query : ''; 
+        $this->query = (empty($query)) ? '&query=' . $query : ''; 
         return $this;
     }
 
