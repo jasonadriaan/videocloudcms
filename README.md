@@ -19,13 +19,6 @@ You can install the package via composer:
 composer require jasonadriaan/videocloudcms
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="videocloudcms-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -38,12 +31,6 @@ In your .env file please add the following lines with your API details from Brig
 VIDEOCLOUD_ACCOUNT_ID=xxxxx
 VIDEOCLOUD_API_KEY=xxxxx
 VIDEOCLOUD_API_SECRET=xxxxx
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="videocloudcms-views"
 ```
 
 ## Usage
