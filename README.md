@@ -124,20 +124,13 @@ class main extends Controller
     public function index(){
 
         $videocloud = new VideoCloudCMS();
-        
+
         $result = $videocloud->getCount();
 
         return $result;
     }
 
 }
-```
-
-
-## Testing
-
-```bash
-composer test
 ```
 
 ## Changelog
