@@ -53,7 +53,10 @@ class main extends Controller
 
         $videocloud = new VideoCloudCMS();
 
-        // update($video_id, $payload)
+        /*  Update requires a video id and a payload 
+        *  eg. update($video_id, $payload) 
+        */
+
         $result = $videocloud->update(1234567890, $payload);
 
         return $result;
@@ -98,7 +101,10 @@ class main extends Controller
 
         $videocloud = new VideoCloudCMS();
 
-        // getVideo($video_id)
+        /* getVideo requires a video id
+        *  eg. getVideo($video_id) 
+        */
+
         $result = $videocloud->getVideo(1234567);
 
         return $result;
@@ -118,8 +124,7 @@ class main extends Controller
     public function index(){
 
         $videocloud = new VideoCloudCMS();
-
-        // getVideo($video_id)
+        
         $result = $videocloud->getCount();
 
         return $result;
