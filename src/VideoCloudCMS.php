@@ -26,7 +26,7 @@ class VideoCloudCMS
 
     public function __construct()
     {
-        $this->base_url = 'https://cms.api.brightcove.com/v1/accounts/' . config('videocloud.account_id');
+        $this->base_url = 'https://cms.api.brightcove.com/v1/accounts/' . config('videocloudcms.account_id');
         return $this;
     }
 
@@ -71,7 +71,7 @@ class VideoCloudCMS
 
     private function authenticate()
     {
-         $auth_string = base64_encode(config('videocloud.api_key') . ':' . config('videocloud.api_secret'));
+         $auth_string = base64_encode(config('videocloudcms.api_key') . ':' . config('videocloudcms.api_secret'));
 
          $response = Http::withHeaders([
              'Content-Type' => 'application/x-www-form-urlencoded',
@@ -97,7 +97,7 @@ class VideoCloudCMS
 
     public function update($video_id, $payload)
     {
-        $request = 'https://cms.api.brightcove.com/v1/accounts/' .  config('videocloud.account_id') . '/videos/' . $video_id; 
+        $request = 'https://cms.api.brightcove.com/v1/accounts/' .  config('videocloudcms.account_id') . '/videos/' . $video_id; 
         $headers = $this->authenticate();
         $response = Http::withHeaders($headers)->patch($request, $payload);
         
