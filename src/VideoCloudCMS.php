@@ -40,6 +40,11 @@ class VideoCloudCMS
         return $this->request($this->base_url . '/videos?' . $this->limit . $this->offset . $this->sort . $this->query);
     }
 
+    public function getVideoSource(int $video_id = null)
+    {
+        return $this->request($this->base_url . '/videos/' . $video_id . '/sources');
+    }
+
     public function getCount()
     {
         return $this->request($this->base_url . '/counts/videos');
